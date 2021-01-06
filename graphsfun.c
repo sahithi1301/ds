@@ -53,29 +53,21 @@ void bfs(int a[20][20],int visit[20],int n)
 					printf("\n");
 	
 }
-void dfs(int a[20][20],int visit[20],int n)
+void dfs(int k,int visit[],int a[20][20],int n)
 {
-int k,j;
-struct queue *s;
-s=(struct queue*)malloc(sizeof(struct queue));
-    s->r=-1;
-    s->f=-1;
-    s=enqueue(s,0);    
-		while(!isempty(s))
-					{
-						k=dequeue(s);
-						if(visit[k]==0)
-						{
-							visit[k]=1;
-							for(j=0;j<n;j++)
-							{
-								if(a[k][j]==1 && visit[j]==0)
-								{
-									s=enqueue(s,j);
-								}
-							}
-						}
-					}
+	int j;
+	if(visit[k]==0)
+	{
+		visit[k]=1;
+		printf("%d\t",k);
+		for(j=0;j<n;j++)
+		{
+			if(a[k][j]==1 && visit[j]==0)
+			{
+				dfs(j,visit,a,n);
+			}
+		}
+	}
 }
 int main()
 {
@@ -83,6 +75,10 @@ int main()
 	int j=0,i=0,k=0,n,opt;
     printf("enter size of matrix:");
 	scanf("%d",&n);
+	struct queue *s;
+    s=(struct queue*)malloc(sizeof(struct queue));
+    s->r=-1;
+    s->f=-1;
 	for(i=0;i<n;i++)
 	{
 		visit[i]=0;
@@ -110,7 +106,17 @@ int main()
 				}
 			case 2:
 			{
-					dfs(a,visit,n);
+					s=enqueue(s,0);
+					for(i=0;i<n;i++)
+					{
+						visit[i]=0;
+					}
+					while(!isempty(s))
+					{
+						k=dequeue(s);
+						dfs(k,visit,a,n);
+					}
+					printf("\n");
 					break;
 			}
 			case 3:

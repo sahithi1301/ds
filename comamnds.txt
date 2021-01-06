@@ -1,0 +1,17 @@
+1. clone
+git clone "repolink"
+
+2. Check status
+git status
+
+3. Add into 
+git add .
+
+4. commit --set cheyada,m
+git commit -m "any message"
+
+5. push -- final step
+git push
+
+
+git --global 
