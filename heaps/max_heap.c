@@ -1,53 +1,45 @@
 //b171152
 //max heap
 #include<stdio.h>
-int n=10;
-int swap(int i,int min,int a[n])
+	
+void heapify(int a[],int n,int i)
 {
-    int temp = a[i];
-    a[i] = a[min];
-    a[min] = temp;
+	int l,r,temp,max=-1;
+	l=2*i+1;
+	r=2*i+2;
+	if(r<n)
+	{
+		if(a[r]>a[l])
+			max=r;
+		else
+			max=l;
+	}
+	else if(l<n)
+	{
+		max=l;
+	}
+	if(a[i]<a[max] && max!=-1)
+	{
+		temp=a[i];
+		a[i]=a[max];
+		a[max]=temp;
+		heapify(a,n,max);
+	}
 }
 
-int heapify(int a[10],int i)
+void main()
 {
-    int l = (2*i)+1;
-    int r = (2*i)+2;
-    int max =-1;
-    if(n>r)
-    {
-        if(a[l]<=a[r])
-        {
-            max = r;
-        }
-        else 
-        {
-            max = l;
-        }
-    }
-    else if(n>l)
-    {
-        max = l;
-    }
-    if(a[i]<=a[max] && max!=-1)
-    {
-        swap(i,max,a);
-        heapify(a,max);
-        
-    }
+	int i,n,j;
+	printf("enter size of heap: ");
+	scanf("%d",&n);
+	int a[n];
+	printf("%d elements: ",n);
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	for(i<n/2;i>=0;i--)
+		heapify(a,n,i);
+	for(j=0;j<n;j++)
+		printf("%d ",a[j]);
 }
 
-int main()
-{
-	int i;
-    int a[10] = {4,3,2,1,4,3,21,6,7,8};
-    for(i=n/2;i>=0;i--)
-    {
-        heapify(a,i);
-    }
-    for(i=0;i<10;i++)
-    {
-        printf("%d ",a[i]);
-    }
-}
 //b171152

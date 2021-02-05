@@ -2,54 +2,44 @@
 //min heaps
 
 #include<stdio.h>
-int n=10;
-int swap(int i,int min,int a[n])
+	
+void heapify(int a[],int n,int i)
 {
-    int temp = a[i];
-    a[i] = a[min];
-    a[min] = temp;
+	int j,l,r,temp,min=-1;
+	l=2*i+1;
+	r=2*i+2;
+	if(r<n)
+	{
+		if(a[r]<a[l])
+			min=r;
+		else
+			min=l;
+	}
+	else if(l<n)
+	{
+		min=l;
+	}
+	if(a[i]>a[min] && min!=-1)
+	{
+		temp=a[i];
+		a[i]=a[min];
+		a[min]=temp;
+		heapify(a,n,min);
+	}
 }
 
-int heapify(int a[10],int i)
+void main()
 {
-    int l = (2*i)+1;
-    int r = (2*i)+2;
-    int min =-1;
-    
-    if(n>r)
-    {
-        if(a[l]>=a[r])
-        {
-            min = r;
-        }
-        else 
-        {
-            min = l;
-        }
-    }
-    else if(n>l)
-    {
-        min = l;
-    }
-    if(a[i]>=a[min] && min!=-1)
-    {
-        swap(i,min,a);
-        heapify(a,min);
-        
-    }
-}
-
-int main()
-{
-	int i;
-    int a[10] = {4,3,2,1,4,3,21,6,7,8};
-    for( i=n/2;i>=0;i--)
-    {
-        heapify(a,i);
-    }
-    for( i=0;i<10;i++)
-    {
-        printf("%d ",a[i]);
-    }
+	int i,n,j;
+	printf("enter size of heap: ");
+	scanf("%d",&n);
+	int a[n];
+	printf("%d elements: ",n);
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	for(i<n/2;i>=0;i--)
+		heapify(a,n,i);
+	for(j=0;j<n;j++)
+		printf("%d ",a[j]);
 }
 //b171152
