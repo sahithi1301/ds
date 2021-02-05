@@ -1,3 +1,6 @@
+//b171152
+//quick sort
+
 #include <stdio.h>
  
 void quick_sort(int[],int,int);
@@ -64,3 +67,4 @@ int partition(int a[],int l,int u)
 	
 	return(j);
 }
+//b171152

@@ -1,3 +1,6 @@
+//b171152
+//merge sorting
+
 #include <stdio.h>
 #define size 100
 void merge(int [],int,int,int);
@@ -67,6 +70,6 @@ void merge(int arr[],int beg,int mid,int end)
 		//printf("%d\t",arr[k]);
 	}
 }
-
+//b171152
 
 		

@@ -1,3 +1,6 @@
+//b171152
+//linked lists implementation using call by value
+
 #include<stdio.h>
 #include<stdlib.h>
 struct node
@@ -282,3 +285,4 @@ void main()
     }
     while(op!=9);
 }
+//b171152

@@ -1,3 +1,6 @@
+//b171152
+//insertion sorting
+
 #include<stdio.h>
 void main()
 {
@@ -26,3 +29,4 @@ void main()
 		printf("%d",a[i]);
 	}
 }
+//b171152

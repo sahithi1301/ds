@@ -1,3 +1,6 @@
+//b171152
+//linked lists using queues 
+
 #include<stdio.h>
 #include<stdlib.h>
 struct node
@@ -111,3 +114,4 @@ void main()
     }
     while(op!=4);
 }
+//b171152

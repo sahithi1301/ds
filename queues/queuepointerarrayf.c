@@ -1,3 +1,7 @@
+//b171152
+//queues using stucture nd pointer array with functions
+
+
 #include<stdio.h>
 
 #include<stdio.h>
@@ -69,3 +73,4 @@ main()
     }
     while(opt!=3);
 }
+//b171152

@@ -1,3 +1,6 @@
+//b171152
+//stacks with functons (structure)
+
 #include<stdio.h>
 #include<stdlib.h>
 struct stack
@@ -65,4 +68,4 @@ void main()
     while(opt!=3)
     ;
 }
-
+//b171152

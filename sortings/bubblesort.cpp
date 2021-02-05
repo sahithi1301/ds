@@ -1,3 +1,6 @@
+//b171152
+//bubble sorting 
+
 #include <stdio.h>
 void main()
 {
@@ -28,4 +31,4 @@ void main()
 		}
 	}
 }
-				
+//b171152				

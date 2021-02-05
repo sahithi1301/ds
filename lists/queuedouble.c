@@ -1,3 +1,6 @@
+//b171152
+//double linked list using queues
+
 #include<stdio.h>
 #include<stdlib.h>
 struct node
@@ -10,6 +13,7 @@ struct node* enqueue(struct node *head,int ele)
 {
 	struct node *nn;
 	nn=(struct node*)malloc(sizeof(struct node));
+	
 	if(nn==NULL)
 	{
 		printf("element cannot be added");
@@ -116,3 +120,4 @@ void main()
     }
     while(op!=4);
 }
+//b171152

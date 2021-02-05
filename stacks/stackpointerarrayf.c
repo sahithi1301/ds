@@ -1,3 +1,7 @@
+//b171152
+//stacks without functions (structure with pointer array)
+
+
 #include<stdio.h>
 struct stack
 {
@@ -67,4 +71,5 @@ void main()
     while(opt!=3)
     ;
 }
+//b171152
 

@@ -1,3 +1,7 @@
+//b171152
+//queues using array without functions
+
+
 #include<stdio.h>
 main()
 {
@@ -53,3 +57,4 @@ main()
     }
     while(opt!=3);
 }
+//b171152

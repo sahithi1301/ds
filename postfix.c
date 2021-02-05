@@ -1,3 +1,6 @@
+//b171152
+//precedance using stacks
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -107,4 +110,4 @@ void main()
 		printf("%c",pop(s));
 	}
 }
-
+//b171152

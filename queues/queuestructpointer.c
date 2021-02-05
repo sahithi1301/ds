@@ -1,3 +1,6 @@
+//b171152
+//queues using structure pointer without functions
+
 #include<stdio.h>
 struct queue
 {
@@ -55,3 +58,4 @@ main()
     }
     while(opt!=3);
 }
+//b171152

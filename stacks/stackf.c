@@ -1,3 +1,6 @@
+//b171152
+//stacks with functions(simple array) 
+
 #include<stdio.h>
 int size=5;
 int a[20];
@@ -59,4 +62,4 @@ void main()
 while(opt!=3)
 ;
 }
-
+//b171152

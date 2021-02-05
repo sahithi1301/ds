@@ -1,3 +1,6 @@
+//b171152
+//queues using array with functions
+
 #include<stdio.h>
 #include<stdlib.h>
 int enqueue(int a[],int rear,int size)
@@ -60,3 +63,4 @@ void main()
     }
     while(opt!=3);
 }
+//b171152

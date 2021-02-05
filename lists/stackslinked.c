@@ -1,3 +1,6 @@
+//b171152
+//lined list using stacks
+
 #include<stdio.h>
 #include<stdlib.h>
 struct node
@@ -99,3 +102,4 @@ void main()
     }
     while(op!=4);
 }
+//b171152

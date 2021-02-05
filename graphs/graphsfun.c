@@ -1,3 +1,6 @@
+//b171152
+//graphs implementation using function (dfs and bfs)
+
 #include<stdio.h>
 #include<stdlib.h>
 struct queue
@@ -127,3 +130,4 @@ int main()
 	}
 	while(opt!=3);
 }
+//b171152

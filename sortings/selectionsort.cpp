@@ -1,3 +1,7 @@
+//b171152
+//selection sorting
+
+
 #include <stdio.h>
 void main()
 {
@@ -28,6 +32,6 @@ void main()
 	}
 	
 }
-
+//b171152
 			
 		
